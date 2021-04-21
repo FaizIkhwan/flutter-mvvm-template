@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:mvvm_template/business_logic/models/TestModel.dart';
+import 'package:mvvm_template/business_logic/models/test_model.dart';
 import 'package:mvvm_template/constants/project_text.dart';
 import 'package:mvvm_template/services/web_api/web_api.dart';
 import 'package:http/http.dart' as http;

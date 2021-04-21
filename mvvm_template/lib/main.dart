@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mvvm_template/services/navigation/NavigationService.dart';
+import 'package:mvvm_template/services/navigation/navigation_service.dart';
 import 'package:mvvm_template/services/service_locator.dart';
 import 'package:mvvm_template/ui/views/test_screen.dart';
 
