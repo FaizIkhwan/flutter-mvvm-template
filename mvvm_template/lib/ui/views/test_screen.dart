@@ -15,6 +15,12 @@ class _TestScreenState extends State<TestScreen> {
   bool _callingApi = false;
 
   @override
+  void initState() {
+    viewModel.testing();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return ModalProgressHUD(
       inAsyncCall: _callingApi,
