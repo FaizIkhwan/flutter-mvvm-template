@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mvvm_template/services/navigation/navigation_service.dart';
 import 'package:mvvm_template/services/service_locator.dart';
+import 'package:mvvm_template/ui/views/second_screen.dart';
 import 'package:mvvm_template/ui/views/test_screen.dart';
 
 void main() async {
@@ -26,16 +27,15 @@ class MyApp extends StatelessWidget {
       navigatorKey: serviceLocator<NavigationService>().navigatorKey,
       onGenerateRoute: (routeSettings) {
         switch (routeSettings.name) {
-          // case 'quran_challenge_congratulation_screen':
-          //   QuranChallengeCongratulationScreen args = routeSettings.arguments;
-          //   return MaterialPageRoute(builder: (context) => QuranChallengeCongratulationScreen(
+          // case 'challenge_congratulation_screen':
+          //   ChallengeCongratulationScreen args = routeSettings.arguments;
+          //   return MaterialPageRoute(builder: (context) => ChallengeCongratulationScreen(
           //     challengeId: args.challengeId,
-          //     challengeStar: args.challengeStar,
-          //     challenge: args.challenge,
-          //     quranTextOriginalList: args.quranTextOriginalList,
           //   ));
           case 'test_screen':
             return MaterialPageRoute(builder: (context) => TestScreen());
+          case 'second_screen':
+            return MaterialPageRoute(builder: (context) => SecondScreen());
           default:
             return MaterialPageRoute(builder: (context) => TestScreen());
         }

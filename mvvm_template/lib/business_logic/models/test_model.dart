@@ -1,5 +1,5 @@
 class TestModel {
-  String test;
+  String? test;
 
   TestModel({this.test});
 

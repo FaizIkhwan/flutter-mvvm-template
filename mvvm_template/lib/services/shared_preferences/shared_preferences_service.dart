@@ -2,13 +2,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreferencesService {
 
-  static SharedPreferencesService _instance;
-  static SharedPreferences _preferences;
+  static SharedPreferencesService? _instance;
+  static SharedPreferences? _preferences;
 
   // Key
   final String _appToken = "app_token";
 
-  static Future<SharedPreferencesService> getInstance() async {
+  static Future<SharedPreferencesService?> getInstance() async {
     if (_instance == null) {
       _instance = SharedPreferencesService();
     }
@@ -19,9 +19,9 @@ class SharedPreferencesService {
   }
 
   String get appToken {
-    return _preferences.get(_appToken);
+    return _preferences?.getString(_appToken) ?? "";
   }
   set appToken(String value) {
-    _preferences.setString(_appToken, value);
+    _preferences?.setString(_appToken, value);
   }
 }
